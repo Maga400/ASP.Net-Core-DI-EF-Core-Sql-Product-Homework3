@@ -1,0 +1,52 @@
+﻿@model UpdateProductViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+<body>
+    <section style="display:flex;justify-content:center;border-radius:10px;border:5px solid black;width:50%;
+    background-color:red;margin:auto;margin-top:50px;">
+
+        <form asp-action="Update" asp-controller="Product" style="width:100%;padding:30px" enctype="multipart/form-data">
+
+            <section>
+                <label asp-for="Product.Name"></label>
+                <input asp-for="Product.Name" />
+                <span style="color:white;" asp-validation-for="Product.Name"></span>
+            </section>
+            <section>
+                <label asp-for="Product.Description"></label>
+                <input asp-for="Product.Description" />
+                <span style="color:white" asp-validation-for="Product.Description"></span>
+            </section>
+            <section>
+                <label asp-for="Product.Discount"></label>
+                <input asp-for="Product.Discount" />
+                <span style="color:white;" asp-validation-for="Product.Discount"></span>
+            </section>
+            <section>
+                <label asp-for="Product.Price"></label>
+                <input asp-for="Product.Price" />
+                <span style="color:white;" asp-validation-for="Product.Price"></span>
+            </section>
+            <section style="text-align:center;">
+                <input style="width:70%;margin:auto;padding:10px;background-color:green;margin-top:30px;color:white" type="file" asp-for="Image" />
+                <span asp-validation-for="Image" style="color:white;"></span>
+            </section>
+            <section>
+                <input style="display:none" asp-for="Product.Id" />
+            </section>
+            <section style="text-align:center">
+                <button style="width:50%;margin:auto;font-size:1.5em;padding:10px;border:2px solid black;
+                border-radius:10px;background-color:blue;color:white;margin-top:50px" type="submit">
+                    UPDATE
+                </button>
+            </section>
+
+        </form>
+    </section>
+</body>
+</html>
